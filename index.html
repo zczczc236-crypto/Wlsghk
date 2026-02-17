@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초강력 중독! 무한 진화 키우기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h2 id="pet-name">나의 작은 생명체</h2>
+            <div class="level-badge">Lv.<span id="level-display">1</span></div>
+        </header>
+
+        <div class="visual-area">
+            <div id="pet" class="floating">🌱</div>
+            <div id="click-effect-container"></div>
+        </div>
+
+        <div class="status-bar">
+            <div class="exp-label">성장 경험치 (<span id="exp-percent">0</span>%)</div>
+            <div class="progress-container">
+                <div id="exp-bar" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-item">💰 코인: <span id="coins">0</span></div>
+            <div class="stat-item">⚡ 초당 성장: <span id="aps">0</span></div>
+        </div>
+
+        <div class="actions">
+            <button id="feed-btn" class="main-btn" onclick="handleTouch()">
+                터치해서 키우기! 🍎
+            </button>
+            <div class="shop">
+                <button onclick="buyUpgrade()" id="upgrade-btn">
+                    자동 성장 물약 (비용: 50코인) ✨
+                </button>
+            </div>
+        </div>
+
+        <div class="audio-controls">
+            <button onclick="toggleMusic()" class="sub-btn">🎵 음악 On/Off</button>
+        </div>
+    </div>
+
+    <audio id="bgm" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"></audio>
+    <audio id="sfx-level" src="https://actions.google.com/sounds/v1/cartoon/clime_up_the_ladder.ogg"></audio>
+    <audio id="sfx-pop" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
