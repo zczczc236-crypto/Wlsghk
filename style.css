@@ -1,0 +1,93 @@
+:root {
+    --primary: #4ade80;
+    --secondary: #22c55e;
+    --bg: #f8fafc;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.game-container {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 둥둥 떠있는 효과 */
+.floating {
+    font-size: 100px;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    user-select: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* 경험치 바 */
+.progress-container {
+    background: #e2e8f0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 15px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #16a34a;
+    transition: 0.1s;
+}
+
+.main-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #16a34a;
+}
+
+.shop button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* 레벨업 시 효과 */
+.level-up-anim {
+    animation: celebrate 0.5s ease-out;
+}
+
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
